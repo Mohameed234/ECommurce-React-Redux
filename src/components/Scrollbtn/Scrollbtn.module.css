@@ -1,0 +1,23 @@
+.scrollbtn{
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ff324d;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.scrollbtn:hover{
+    background-color: #d2011d;
+}

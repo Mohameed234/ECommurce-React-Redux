@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color-1: black;
+    --font-color-2: #FF324D;
+    --font-color-3: #687188;
+    --transition-primary: 0.3s;
+    --container-padding: 1rem 13rem;
+}
+html{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+
+.login{
+    padding: var(--container-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    margin-top: 150px;
+}
+.container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    width: 50%;
+   
+    box-shadow: 1px 2px 7px 0px #41414166;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+.container form input[type='email'],
+.container form input[type='password'],
+.container form input[type='button']
+{
+    padding: 10px;
+    height: 45px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+}
+.container form .remember{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container form .checkBox{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--font-color-3);
+}
+.container form .remember a{
+    color: var(--font-color-3);
+}
+.container form input[type='button']{
+    background-color: var(--font-color-2);
+    cursor: pointer;
+    border: 1px solid var(--font-color-2);
+    color: white;
+    transition: var(--transition-primary);
+}
+.container form input[type='button']:hover{
+    color: var(--font-color-2);
+    background-color: transparent;
+}
+.container form .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.container form .facebook,
+.container form .google{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   color: white;
+   height: 45px;
+   width: 130px;
+   border-radius: 4px;
+   transition: var(--transition-primary);
+}
+.container form .facebook{
+    background-color: #316FF6;
+}
+.container form .facebook:hover{
+    background-color: #125cfc;
+}
+.container form .google{
+    background-color: #db4a39;
+}
+.container form .google:hover{
+    background-color: #ab3326;
+}
+.container form > p{
+    align-self: center;
+}
+.container form > p a{
+    color: var(--font-color-3);
+}
+
+
+@media screen and (max-width:575px) {
+    .login{
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    .container{
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (min-width:576px) and (max-width: 767px) {
+    .login{
+        padding: 50px;
+        font-size: 0.8rem;
+    }
+    .container{
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .login{
+        padding: 50px;
+        font-size: 0.8rem;
+    }
+    .container{
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (min-width:992px) and (max-width: 1279px) {
+    .login{
+        padding: 50px;
+        font-size: 0.8rem;
+    }
+    .container{
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 0.8rem;
+    }
+}
+

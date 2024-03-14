@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color-1: black;
+    --font-color-2: #FF324D;
+    --font-color-3: #687188;
+    --transition-primary: 0.3s;
+    --container-padding: 1rem 13rem;
+    --bg-sofa:#d6f6f1;
+    --bg-btn-color: #333;
+}
+html{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.services{
+    margin: 5rem 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    height: 100px;
+
+}
+.services .box{
+    padding: 2rem;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.services .box i{
+    font-size: 2.2rem;
+    color: #ff324dbf;
+    
+}
+.services .box:not(:nth-child(4)){
+    border-right: 1px solid rgba(0, 0, 0, 0.331);
+}
+.services .box .servicesText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.services .box h3{
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+.services .box p{
+    color: var(--font-color-3);
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 575px){
+    .services{
+        border: none;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+    }
+    .services .box:not(:nth-child(4)){
+        border: none;
+    }
+    
+    .services .box{
+        gap: 2rem;
+    }
+  
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .services{
+        border: none;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+    }
+    .services .box:not(:nth-child(4)){
+        border: none;
+    }
+    
+    .services .box{
+        gap: 2rem;
+    }
+  
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .services{
+        border: none;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+    }
+    .services .box:not(:nth-child(4)){
+        border: none;
+    }
+    
+    .services .box{
+        gap: 2rem;
+    }
+  
+}
+@media screen and (min-width: 992px) and (max-width: 1279px){
+    .services{
+        border: none;
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+    }
+    .services .box:not(:nth-child(4)){
+        border: none;
+    }
+    
+    .services .box{
+        gap: 2rem;
+    }
+  
+}

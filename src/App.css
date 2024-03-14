@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --font-color-1: black;
+  --font-color-2: #FF324D;
+  --font-color-3: #687188;
+  --transition-primary: 0.3s;
+  --container-padding: 1rem 13rem;
+  --bg-sofa:#d6f6f1;
+  --bg-btn-color: #333;
+}
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--font-color-3);
+  border-radius: 50px;
+  height: 5px;
+}
+html{
+  font-size: 16px;
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.active{
+  color: #FF324D;
+}
+@media screen and (max-width: 575px){
+  html{
+    font-size: 13px;
+  }
+}
+

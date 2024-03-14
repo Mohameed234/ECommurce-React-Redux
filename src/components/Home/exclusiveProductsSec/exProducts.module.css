@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color-1: black;
+    --font-color-2: #FF324D;
+    --font-color-3: #687188;
+    --transition-primary: 0.3s;
+    --container-padding: 1rem 13rem;
+    --bg-btn-color: #333;
+}
+html{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.exProducts{
+    padding: var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.exProducts h1{
+    padding: 0.5rem;
+    position: relative;
+}
+.exProducts h1::after{
+    content: '';
+    width: 40%;
+    height: 1px;
+    background-color: var(--font-color-2);
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.exProducts .exCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.exProducts .exCards .card{
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    height: 450px;
+    width: 250px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    position: relative;
+    overflow: hidden;
+}
+.exProducts .exCards .card p{
+    color: var(--font-color-2);
+    font-weight: bold;
+}
+.exProducts .exCards .card span{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--font-color-3);
+    text-decoration: line-through;
+}
+.exProducts .exCards .card .img{
+    width: 100%;
+    height: 70%;
+    
+}
+.exProducts .exCards .card .img img{
+    width: 100%;
+    height: 100%;
+}
+.exProducts .exCards .card .img .layer{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.025);
+    transition: 0.5s;
+}
+.exProducts .exCards .card:hover .img .layer{
+    background-color: rgba(0, 0, 0, 0.167);
+}
+.exProducts .exCards .card .rate{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.exProducts .exCards .card .rate .stars i{
+    color: #F6BC3E;
+}
+.exProducts .exCards .card .rate .count{
+    color: var(--font-color-3);
+    font-weight: 400;
+
+}
+.exProducts .exCards .card button{
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 60px;
+    width: 170px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background-color: var(--font-color-2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    transition: var(--transition-primary);
+    border: 1px solid var(--font-color-2);
+    
+}
+.exProducts .exCards .card button h5{
+    font-weight: 400;
+}
+.exProducts .exCards .card button:hover{
+    border: 1px solid var(--font-color-2);
+    background-color: white;
+    color: var(--font-color-2);
+}
+.exProducts .exCards .card:hover button,
+.exProducts .exCards .card:hover .btns .btn{
+    display: flex;
+}
+.exProducts .exCards .card:hover button{
+    bottom: 25px;
+    opacity: 1;
+}
+.exProducts .exCards .card:hover .btns{
+    top: 150px;
+    opacity: 1;
+}
+
+.exProducts .exCards .card .btns{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: 130px;
+    opacity: 0;
+    transition: var(--transition-primary);
+}
+.exProducts .exCards .card .btns .btn{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.exProducts .exCards .card .btns .btn:hover{
+    background-color: var(--font-color-2);
+    color: white;
+}
+
+
+
+
+
+
+@media screen and (max-width: 575px){
+    .exProducts{
+        padding: 10px;
+    }
+    .exProducts .exCards .card .img .layer{
+        height: 73%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .exProducts{
+        padding: 10px;
+    }
+    .exProducts .exCards .card .img .layer{
+        height: 73%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .exProducts{
+        padding: 10px;
+    }
+    .exProducts .exCards .card .img .layer{
+        height: 73%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1279px){
+    .exProducts{
+        padding: 10px;
+    }
+    .exProducts .exCards .card .img .layer{
+        height: 73%;
+    }
+}
+
+
+
+
+

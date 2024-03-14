@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color-1: black;
+    --font-color-2: #FF324D;
+    --font-color-3: #687188;
+    --transition-primary: 0.3s;
+    --container-padding: 1rem 13rem;
+}
+html{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+
+
+.products{
+    padding: var(--container-padding);  
+    margin: 50px 0;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    
+
+    
+}
+.productsNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productsNav select{
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    text-transform: capitalize;
+    border: 1px solid rgba(0, 0, 0, 0.263);
+    border-radius: 6px;
+    
+}
+.productsNav .veiw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.productsNav .veiw button{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.263);
+    cursor: pointer;
+    border-radius: 6px;
+   
+}
+.productsNav .veiw .block{
+    background-color: var(--font-color-2);
+    color: white;
+    border: 1px solid var(--font-color-2);
+}
+.productsNav .veiw select{
+    width: 200px;
+}
+.productsNav .veiw button i{
+    font-size: 1.5rem;
+    transition: var(--transition-primary);
+}
+
+.buttonActive{
+    background-color: var(--font-color-2);
+    color: white;
+    border: 1px solid var(--font-color-2);
+}
+
+.cards{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    height: 450px;
+    width: 250px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    position: relative;
+    overflow: hidden;
+}
+.card p{
+    color: var(--font-color-2);
+    font-weight: bold;
+}
+.card span{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--font-color-3);
+    text-decoration: line-through;
+}
+.card .img{
+    width: 100%;
+    height: 70%;
+    
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+}
+.card .img .layer{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.025);
+    transition: 0.5s;
+}
+.card:hover .img .layer{
+    background-color: rgba(0, 0, 0, 0.167);
+}
+.card .rate{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card .rate .stars i{
+    color: #F6BC3E;
+}
+.card .rate .count{
+    color: var(--font-color-3);
+    font-weight: 400;
+
+}
+.card button{
+    position: absolute;
+    bottom: 25px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 60px;
+    width: 170px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background-color: var(--font-color-2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    transition:  0.7s;
+    border: 1px solid var(--font-color-2);
+    
+}
+.card button h5{
+    font-weight: 400;
+}
+.card button:hover{
+    border: 1px solid var(--font-color-2);
+    background-color: white;
+    color: var(--font-color-2);
+}
+.card:hover button,
+.card:hover .btns .btn{
+    display: flex;
+}
+.card .btns{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: 150px;
+}
+.btns .btn{
+    width: 40px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.card .btns .btn:hover{
+    background-color: var(--font-color-2);
+    color: white;
+}
+
+
+
+
+
+.colCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+
+}
+.colCards .image{
+    height: 100%;
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* object-fit: cover; */
+}
+.colCards img{
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+    
+}
+.colCard {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.273);
+    border-radius: 8px;
+    padding: 50px;
+    box-shadow: 1px 2px 7px 0px #41414166;
+
+}
+.colCard .details{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 100%;
+    
+}
+.colCard .details .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.colCard .details .price .rate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.colCard .details .price span{
+    color: var(--font-color-2);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.details .rate .stars i{
+    color: #F6BC3E;
+}
+.colCard .details > p{
+    width: 70%;
+}
+.addToCart{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--font-color-2);
+    border: 1px solid var(--font-color-2);
+    outline: none;
+}
+.addToCart:hover{
+    color: var(--font-color-2);
+    background-color: transparent;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.shuffle ,
+.heart,
+.zoom{
+    width: 50px;
+    height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.shuffle i,
+.heart i,
+.zoom i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-primary);
+}
+.shuffle i:hover,
+.heart i:hover,
+.zoom i:hover{
+    color: var(--font-color-2);
+}
+
+@media screen and (max-width: 575px) {
+    .products{
+        padding: 15px;
+    }
+    .products .productsNav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .products .productsNav select,
+    .products .productsNav .veiw
+    {
+        width:100%;
+    }
+    .products .productsNav .veiw button{
+        width: 75px;
+    }
+    
+    .products .colCard{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .products .colCard .details > p{
+        width: 90%;
+    }
+    .products .colCard .image{
+        width: 250px;
+        height: 300px;
+        margin: auto;
+    }
+    .products .details .price{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem;
+    }
+    .products .buttons .addToCart{
+        width: 100%;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 576px) and (max-width:767px) {
+    .products{
+        padding: 15px;
+    }
+    .products .productsNav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .products .productsNav select,
+    .products .productsNav .veiw
+    {
+        width:100%;
+    }
+    .products .productsNav .veiw button{
+        width: 75px;
+    }
+    
+    .products .colCard{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .products .colCard .details > p{
+        width: 90%;
+    }
+    .products .colCard .image{
+        width: 250px;
+        height: 300px;
+        margin: auto;
+    }
+    .products .details .price{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem;
+    }
+    .products .buttons .addToCart{
+        width: 200px;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:991px) {
+    .products{
+        padding: 15px;
+    }
+    .products .productsNav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .products .productsNav select,
+    .products .productsNav .veiw
+    {
+        width:100%;
+    }
+    .products .productsNav .veiw button{
+        width: 75px;
+    }
+    
+    .products .colCard{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .products .colCard .details > p{
+        width: 90%;
+    }
+    .products .colCard .image{
+        width: 250px;
+        height: 300px;
+        margin: auto;
+    }
+    .products .details .price{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem;
+    }
+    .products .buttons .addToCart{
+        width: 200px;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 992px) and (max-width:1279px) {
+    .products{
+        padding: 15px;
+    }
+    .products .productsNav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .products .productsNav select,
+    .products .productsNav .veiw
+    {
+        width:100%;
+    }
+    .products .productsNav .veiw button{
+        width: 75px;
+    }
+    
+    .products .colCard{
+        /* flex-direction: column; */
+        padding: 30px;
+    }
+    .products .colCard .details > p{
+        width: 90%;
+    }
+    .products .colCard .image{
+        width: 300px;
+       
+        margin: auto;
+    }
+    .products .details .price{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.5rem;
+    }
+    .products .buttons .addToCart{
+        width: 200px;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color-1: black;
+    --font-color-2: #FF324D;
+    --font-color-3: #687188;
+    --transition-primary: 0.3s;
+    --container-padding: 1rem 13rem;
+}
+html{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+
+/*****************Nav-Top**************/
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav .top{
+   
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+    height: 50px;
+    padding:var(--container-padding);
+    
+}
+nav .top .topright .compare,
+nav .top .topright .wishList,
+nav .top .topright .login,
+.nav .top .topleft .mobile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.topleft{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    align-items: center;
+}
+.topleft select{
+    height: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.topleft .lang select{
+    width: 80px;
+}
+.topleft .regoin select{
+    width: 60px;
+}
+.topleft select option p{
+    border: none;
+    outline: none;
+}
+
+.topleft .lang select{
+    text-transform: capitalize;
+}
+.topright{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.topright a{
+
+    text-transform: capitalize;
+    transition: var(--transition-primary);
+}
+.topright a:hover{
+    color:var(--font-color-2);
+    
+}
+
+/*****************Nav-Bottom**************/
+
+
+.nav .bottom{
+
+    padding: var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+   
+}
+
+.nav .bottom .links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.nav .bottom .links a{
+    transition: var(--transition-primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+
+}
+.nav .bottom .links a:hover{
+    color: var(--font-color-2);
+}
+.active{
+    color: var(--font-color-2);
+}
+.nav .bottom .navicons{
+    display: flex;
+    align-content: center;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    
+}
+small{
+    position: relative;
+    background-color: var(--font-color-2);
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 30px;
+    bottom: 10px;
+    font-size: 0.8rem;
+}
+.nav .bottom .navicons i{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.nav .bottom .links.isactive{
+    display: block;
+}
+
+
+
+
+
+.nav .bottom .menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
+}
+.nav .bottom .menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: black;
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+.links i{
+    font-size: 1.5rem;
+    align-self: flex-end;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 575px){
+ 
+    .nav .top, 
+    .nav .bottom{
+        padding: 10px;
+    }
+    .nav .top{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        height: auto;
+    }
+    .nav .bottom .links{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        left: 800px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--font-color-3);
+        z-index: 1000;
+
+   }
+   
+
+   .nav .bottom .links a{
+    font-size: 1.2rem;
+   }
+   .nav .bottom .menu{
+        display: block;
+   }
+   .nav .bottom .logo img{
+    height: 35px;
+   }
+   .links i{
+        font-size: 1.5rem;
+        align-self: flex-end;
+        display: block;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+  
+    .nav .top, 
+    .nav .bottom{
+        padding: 10px;
+    }
+    .nav .top{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+        height: auto;
+    }
+    .nav .bottom .links{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        left: 800px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--font-color-3);
+
+   }
+   .nav .bottom .links a{
+    font-size: 1.2rem;
+   }
+   .nav .bottom .menu{
+        display: block;
+   }
+   .nav .bottom .logo img{
+    height: 35px;
+   }
+   .links i{
+    font-size: 1.5rem;
+    align-self: flex-end;
+    display: block;
+    cursor: pointer;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+   
+    .nav .top, 
+    .nav .bottom{
+        padding: 10px;
+    }
+    .nav .top{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+        height: auto;
+    }
+    .nav .bottom .links{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        left: 1000px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--font-color-3);
+
+   }
+   .nav .bottom .links a{
+    font-size: 1.2rem;
+   }
+   .nav .bottom .menu{
+        display: block;
+   }
+   .nav .bottom .logo img{
+    height: 35px;
+   }
+   .links i{
+    font-size: 1.5rem;
+    align-self: flex-end;
+    display: block;
+    cursor: pointer;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1279px){
+   
+    .nav .top, 
+    .nav .bottom{
+        padding: 10px;
+    }
+    .nav .top{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+        height: auto;
+    }
+    .nav .bottom .links{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        left: 2000px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--font-color-3);
+
+   }
+   .nav .bottom .links a{
+    font-size: 1.2rem;
+   }
+   .nav .bottom .menu{
+        display: block;
+   }
+   .nav .bottom .logo img{
+    height: 35px;
+   }
+   .links i{
+        font-size: 1.5rem;
+        align-self: flex-end;
+        display: block;
+        cursor: pointer;
+    }
+}
