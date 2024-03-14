@@ -148,10 +148,10 @@ const NavPar = () => {
 
             <div className={style.links} id="links">
                 <i class="fa-solid fa-rectangle-xmark" id="close"></i>
-              <NavLink to='/home' id="home">home</NavLink>
-              <NavLink to='/products' id="products">products</NavLink>
-              <NavLink to='/cart' id="cart">Cart - {cart.length}</NavLink>
-              <NavLink to='/login' id="login">login</NavLink>
+              <NavLink to='home' id="home">home</NavLink>
+              <NavLink to='products' id="products">products</NavLink>
+              <NavLink to='cart' id="cart">Cart - {cart.length}</NavLink>
+              <NavLink to='login' id="login">login</NavLink>
         
             </div>
           
